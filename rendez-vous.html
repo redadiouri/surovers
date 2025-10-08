@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre Rendez-vous - Surovers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rendez-vous.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SUROVERS</h1>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" onclick="closeMobileMenu()">Accueil</a></li>
+                <li><a href="index.html#models" onclick="closeMobileMenu()">Modèles</a></li>
+                <li><a href="index.html#experience" onclick="closeMobileMenu()">Expérience</a></li>
+                <li><a href="index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="appointment-main">
+        <!-- Hero Section -->
+        <section class="appointment-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Réservez Votre Essai Exclusif</h1>
+                    <p class="hero-subtitle">Découvrez l'excellence Surovers lors d'un essai personnalisé sur notre circuit privé</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section class="appointment-form-section">
+            <div class="container">
+                <div class="appointment-content">
+                    <!-- Left side - Information -->
+                    <div class="appointment-info">
+                        <h2>Pourquoi Choisir un Essai Surovers ?</h2>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">🏁</div>
+                            <div class="info-text">
+                                <h3>Circuit Privé Premium</h3>
+                                <p>Testez nos véhicules sur un circuit professionnel dans des conditions optimales</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">👨‍💼</div>
+                            <div class="info-text">
+                                <h3>Expert Personnel Dédié</h3>
+                                <p>Un spécialiste Surovers vous accompagne pour personnaliser votre expérience</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">🍾</div>
+                            <div class="info-text">
+                                <h3>Service VIP Inclus</h3>
+                                <p>Accueil premium avec rafraîchissements et service de conciergerie</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📅</div>
+                            <div class="info-text">
+                                <h3>Flexibilité Totale</h3>
+                                <p>Créneaux disponibles 7j/7 selon votre convenance, même le soir et week-end</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-urgency">
+                            <h3>Besoin Urgent ?</h3>
+                            <p>Appelez directement notre ligne VIP :</p>
+                            <a href="tel:+33123456789" class="phone-link">📞 +33 1 23 45 67 89</a>
+                        </div>
+                    </div>
+
+                    <!-- Right side - Form -->
+                    <div class="appointment-form-container">
+                        <form class="appointment-form" id="appointmentForm">
+                            <h2>Réserver Mon Essai</h2>
+                            
+                            <div class="form-section">
+                                <h3>Informations Personnelles</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Prénom *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Nom *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Téléphone *</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Détails de l'Essai</h3>
+                                <div class="form-group">
+                                    <label for="model">Modèle Souhaité *</label>
+                                    <select id="model" name="model" required>
+                                        <option value="">Choisissez un modèle</option>
+                                        <option value="gt">Surovers GT - Sportive (180 000€)</option>
+                                        <option value="luxury">Surovers Luxury - Prestige (220 000€)</option>
+                                        <option value="electric">Surovers Electric - Écologique (160 000€)</option>
+                                        <option value="all">Je souhaite tester plusieurs modèles</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="location">Lieu d'Essai *</label>
+                                        <select id="location" name="location" required>
+                                            <option value="">Choisissez un lieu</option>
+                                            <option value="paris">Circuit de Paris - Vincennes</option>
+                                            <option value="monaco">Circuit de Monaco - Monte-Carlo</option>
+                                            <option value="lyon">Circuit de Lyon - Eurexpo</option>
+                                            <option value="domicile">À domicile (supplément 200€)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="duration">Durée Souhaitée</label>
+                                        <select id="duration" name="duration">
+                                            <option value="1h">1 heure - Découverte rapide</option>
+                                            <option value="2h" selected>2 heures - Essai complet (recommandé)</option>
+                                            <option value="half-day">Demi-journée - Expérience premium</option>
+                                            <option value="full-day">Journée complète - VIP Experience</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="date">Date Préférée *</label>
+                                        <input type="date" id="date" name="date" required min="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="time">Heure Préférée *</label>
+                                        <select id="time" name="time" required>
+                                            <option value="">Choisissez un créneau</option>
+                                            <option value="09:00">09:00 - Matinée</option>
+                                            <option value="11:00">11:00 - Fin de matinée</option>
+                                            <option value="14:00">14:00 - Début d'après-midi</option>
+                                            <option value="16:00">16:00 - Après-midi</option>
+                                            <option value="18:00">18:00 - Fin d'après-midi</option>
+                                            <option value="20:00">20:00 - Soirée (week-end uniquement)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Informations Complémentaires</h3>
+                                <div class="form-group">
+                                    <label for="experience">Expérience Automobile</label>
+                                    <select id="experience" name="experience">
+                                        <option value="">Non spécifié</option>
+                                        <option value="novice">Débutant - Première voiture de luxe</option>
+                                        <option value="intermediate">Intermédiaire - Quelques voitures haut de gamme</option>
+                                        <option value="expert">Expert - Collectionneur/Amateur confirmé</option>
+                                        <option value="professional">Professionnel - Industrie automobile</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="budget">Budget Envisagé</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Non spécifié</option>
+                                        <option value="150-180k">150 000€ - 180 000€</option>
+                                        <option value="180-220k">180 000€ - 220 000€</option>
+                                        <option value="220k+">220 000€ et plus</option>
+                                        <option value="financing">Intéressé par le financement</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Demandes Particulières</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="Configuration spécifique, options souhaitées, accompagnants, besoins particuliers..."></textarea>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <span class="checkmark"></span>
+                                        Je souhaite recevoir les actualités exclusives Surovers
+                                    </label>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <span class="checkmark"></span>
+                                        J'accepte les <a href="#" class="link">conditions générales</a> et la <a href="#" class="link">politique de confidentialité</a> *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn">
+                                    <span>Confirmer Mon Rendez-vous</span>
+                                    <div class="btn-effect"></div>
+                                </button>
+                                <p class="form-note">
+                                    * Un conseiller Surovers vous contactera sous 2h pour confirmer votre rendez-vous
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmation Modal -->
+        <div class="modal" id="confirmationModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Demande Envoyée ✅</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Merci pour votre demande de rendez-vous !</p>
+                    <p>Un conseiller Surovers vous contactera dans les <strong>2 heures</strong> pour confirmer votre essai.</p>
+                    <p>Vous recevrez également un email de confirmation à l'adresse indiquée.</p>
+                </div>
+                <div class="modal-actions">
+                    <button onclick="closeModal()" class="modal-btn">Fermer</button>
+                    <button onclick="window.location.href='index.html'" class="modal-btn primary">Retour à l'accueil</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SUROVERS</h3>
+                    <p>L'excellence automobile redéfinie</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html#models">Nos Modèles</a></li>
+                        <li><a href="index.html#experience">Expérience Client</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: contact@surovers.com</p>
+                    <p>Tél: +33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surovers. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set minimum date to today
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        
+        // Navigation mobile
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            navMenu.classList.toggle('nav-menu-active');
+            mobileBtn.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            navMenu.classList.remove('nav-menu-active');
+            mobileBtn.classList.remove('active');
+        }
+        
+        // Form submission
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show confirmation modal
+            document.getElementById('confirmationModal').style.display = 'flex';
+            
+            // Reset form
+            this.reset();
+            document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        });
+        
+        // Modal functions
+        function closeModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('confirmationModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(event.target)) {
+                navMenu.classList.remove('nav-menu-active');
+                mobileBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
