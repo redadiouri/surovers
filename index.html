@@ -229,6 +229,27 @@
         </section>
     </main>
 
+    <!-- Publicité Location de voiture -->
+    <div class="ad-banner" id="adBanner" style="display: none;">
+        <div class="ad-close" onclick="closeAd()">×</div>
+        <div class="ad-content">
+            <div class="ad-logo">
+                <h3>🚗 HERTZ</h3>
+            </div>
+            <div class="ad-text">
+                <h4>Besoin d'une voiture ?</h4>
+                <p>Location de voitures premium<br>Disponible 24h/24</p>
+                <div class="ad-offer">
+                    <span class="ad-discount">-20%</span>
+                    <span class="ad-code">Code: LUXURY20</span>
+                </div>
+            </div>
+            <a href="https://www.hertz.fr/rentacar/reservation/" target="_blank" class="ad-button" onclick="trackAdClick()">
+                Réserver Maintenant
+            </a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -300,6 +321,37 @@
                 }
             });
         });
+        
+        // Gestion de la publicité Hertz
+        function closeAd() {
+            const adBanner = document.getElementById('adBanner');
+            adBanner.classList.add('fade-out');
+            setTimeout(() => {
+                adBanner.style.display = 'none';
+            }, 300);
+            
+            // Mémoriser que l'utilisateur a fermé la pub
+            localStorage.setItem('hertz-ad-closed', 'true');
+        }
+        
+        function trackAdClick() {
+            console.log('Clic sur publicité Hertz - Redirection vers Hertz.fr');
+            // Ici on pourrait ajouter Google Analytics ou autre tracking
+        }
+        
+        // Afficher la pub après 3 secondes, sauf si déjà fermée
+        setTimeout(() => {
+            const adClosed = localStorage.getItem('hertz-ad-closed');
+            if (!adClosed) {
+                const adBanner = document.getElementById('adBanner');
+                adBanner.style.display = 'block';
+            }
+        }, 3000);
+        
+        // Réafficher la pub après 24h
+        setTimeout(() => {
+            localStorage.removeItem('hertz-ad-closed');
+        }, 24 * 60 * 60 * 1000); // 24 heures
     </script>
 </body>
 </html>

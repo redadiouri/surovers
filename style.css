@@ -110,6 +110,166 @@ section {
     scroll-margin-top: 80px;
 }
 
+/* Publicité Hertz */
+.ad-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    z-index: 1500;
+    animation: slideInUp 0.5s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+.ad-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.ad-close:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: rotate(90deg);
+}
+
+.ad-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ad-logo {
+    text-align: center;
+}
+
+.ad-logo h3 {
+    color: #ffd700;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ad-text {
+    text-align: center;
+}
+
+.ad-text h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.ad-text p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.ad-offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.ad-discount {
+    background: #ff4444;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.ad-code {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+.ad-button {
+    display: block;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #000;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.ad-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(45deg, #ffed4e, #ffd700);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ad-banner.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Responsive pour la pub */
+@media (max-width: 768px) {
+    .ad-banner {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
 /* Hero Section */
 .hero {
     display: flex;
