@@ -14,11 +14,16 @@
             <div class="logo">
                 <h1>SUROVERS</h1>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#models">Modèles</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" onclick="closeMobileMenu()">Accueil</a></li>
+                <li><a href="#models" onclick="closeMobileMenu()">Modèles</a></li>
+                <li><a href="#experience" onclick="closeMobileMenu()">Expérience</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -69,6 +74,151 @@
             </div>
         </section>
 
+        <!-- Models Section -->
+        <section id="models" class="models">
+            <div class="container">
+                <h2>Nos Modèles d'Exception</h2>
+                <div class="models-grid">
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="image1.png" alt="Surovers GT" class="model-img">
+                        </div>
+                        <div class="model-info">
+                            <h3>Surovers GT</h3>
+                            <p class="model-price">À partir de 180 000 €</p>
+                            <p class="model-desc">Le summum de la performance sportive avec un design révolutionnaire</p>
+                            <ul class="model-specs">
+                                <li>0-100 km/h en 3.2s</li>
+                                <li>Autonomie : 650 km</li>
+                                <li>Puissance : 750 ch</li>
+                            </ul>
+                            <button class="cta-button">Découvrir</button>
+                        </div>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="image1.png" alt="Surovers Luxury" class="model-img">
+                        </div>
+                        <div class="model-info">
+                            <h3>Surovers Luxury</h3>
+                            <p class="model-price">À partir de 220 000 €</p>
+                            <p class="model-desc">L'élégance absolue pour une expérience de conduite raffinée</p>
+                            <ul class="model-specs">
+                                <li>Intérieur cuir premium</li>
+                                <li>Conduite autonome niveau 4</li>
+                                <li>Sound system Bose</li>
+                            </ul>
+                            <button class="cta-button">Découvrir</button>
+                        </div>
+                    </div>
+                    <div class="model-card">
+                        <div class="model-image">
+                            <img src="image1.png" alt="Surovers Electric" class="model-img">
+                        </div>
+                        <div class="model-info">
+                            <h3>Surovers Electric</h3>
+                            <p class="model-price">À partir de 160 000 €</p>
+                            <p class="model-desc">100% électrique pour un avenir durable sans compromis</p>
+                            <ul class="model-specs">
+                                <li>Autonomie : 800 km</li>
+                                <li>Charge rapide 15 min</li>
+                                <li>Zéro émission</li>
+                            </ul>
+                            <button class="cta-button">Découvrir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>L'Expérience Surovers</h2>
+                <div class="experience-content">
+                    <div class="experience-text">
+                        <h3>Un Service d'Excellence</h3>
+                        <p>Chez Surovers, chaque client bénéficie d'un accompagnement personnalisé de la première prise de contact jusqu'à la livraison de son véhicule d'exception.</p>
+                        
+                        <div class="experience-features">
+                            <div class="exp-feature">
+                                <h4>🏆 Conseil Personnalisé</h4>
+                                <p>Un expert dédié pour vous accompagner dans le choix de votre Surovers</p>
+                            </div>
+                            <div class="exp-feature">
+                                <h4>🔧 Personnalisation</h4>
+                                <p>Configurez votre véhicule selon vos goûts avec nos options premium</p>
+                            </div>
+                            <div class="exp-feature">
+                                <h4>🚗 Essai Privilégié</h4>
+                                <p>Testez nos modèles dans un cadre exclusif sur circuit privé</p>
+                            </div>
+                            <div class="exp-feature">
+                                <h4>📞 Support 24/7</h4>
+                                <p>Assistance premium disponible à tout moment pour nos clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-image">
+                        <img src="image1.png" alt="Expérience Surovers" class="exp-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-Nous</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Nos Showrooms</h3>
+                        <div class="contact-item">
+                            <h4>📍 Paris Champs-Élysées</h4>
+                            <p>123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                            <p>Tél: +33 1 23 45 67 89</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📍 Monaco Monte-Carlo</h4>
+                            <p>45 Boulevard du Casino<br>98000 Monaco</p>
+                            <p>Tél: +377 98 76 54 32</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>📧 Contact Digital</h4>
+                            <p>Email: contact@surovers.com</p>
+                            <p>WhatsApp: +33 6 12 34 56 78</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Demande de Renseignements</h3>
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nom complet" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Téléphone">
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Modèle d'intérêt</option>
+                                    <option value="gt">Surovers GT</option>
+                                    <option value="luxury">Surovers Luxury</option>
+                                    <option value="electric">Surovers Electric</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Votre message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Envoyer la Demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <div class="container">
@@ -106,5 +256,50 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Navigation mobile
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            navMenu.classList.toggle('nav-menu-active');
+            mobileBtn.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            navMenu.classList.remove('nav-menu-active');
+            mobileBtn.classList.remove('active');
+        }
+        
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(event.target)) {
+                navMenu.classList.remove('nav-menu-active');
+                mobileBtn.classList.remove('active');
+            }
+        });
+        
+        // Scroll fluide pour les liens
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
